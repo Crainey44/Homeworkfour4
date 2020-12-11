@@ -5,7 +5,7 @@ var questionElement = document.getElementById("questions");
 var answerButtonsElement = document.getElementById("answer-buttons");
 var counter = document.getElementById("counter");
 var timer = document.getElementById("timer");
-var scoreCnt = document.getElementById("s2      core");
+var scoreCnt = document.getElementById("score");
 
 startBTN.addEventListener('click', startQuiz);
 
@@ -28,8 +28,8 @@ function resetState() {
     
 
 }
-function showQuestion(question) {
-    questionElement.innerText = question.question
+function showQuestion(Question) {
+    questionElement.innerText = questions.questions
     question.answers.forEach(answer => {
         const button = document.createElement("button")
         button.innertext = answer.text
